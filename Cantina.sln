@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelCantina", "ModelCantina\ModelCantina.csproj", "{23C2FD4C-56A6-4B54-858F-9401628EEF1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUICantina", "GUICantina\GUICantina.csproj", "{BF2CAFE0-3A39-46D7-AD22-AD3FE6468D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerCantina", "ControllerMemory\ControllerCantina.csproj", "{7621B707-6021-4C3D-9FE5-41C5AF614E57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23C2FD4C-56A6-4B54-858F-9401628EEF1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C2FD4C-56A6-4B54-858F-9401628EEF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C2FD4C-56A6-4B54-858F-9401628EEF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C2FD4C-56A6-4B54-858F-9401628EEF1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2CAFE0-3A39-46D7-AD22-AD3FE6468D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2CAFE0-3A39-46D7-AD22-AD3FE6468D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2CAFE0-3A39-46D7-AD22-AD3FE6468D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2CAFE0-3A39-46D7-AD22-AD3FE6468D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7621B707-6021-4C3D-9FE5-41C5AF614E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7621B707-6021-4C3D-9FE5-41C5AF614E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7621B707-6021-4C3D-9FE5-41C5AF614E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7621B707-6021-4C3D-9FE5-41C5AF614E57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
