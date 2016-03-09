@@ -105,7 +105,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ControllerMemory\ControllerCantina.csproj">
+    <ProjectReference Include="..\Controller\ControllerCantina.csproj">
       <Project>{7621b707-6021-4c3d-9fe5-41c5af614e57}</Project>
       <Name>ControllerCantina</Name>
     </ProjectReference>
