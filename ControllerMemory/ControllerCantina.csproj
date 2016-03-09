@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ControllerCantina</RootNamespace>
-    <AssemblyName>ControllerMemory</AssemblyName>
+    <AssemblyName>ControllerCantina</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADO\ADODBConnection.cs" />
-    <Compile Include="ADO\ControllerFuncionarioADO.cs" />
-    <Compile Include="Interfaces\IControllerFuncionario.cs" />
+    <Compile Include="ADO\ControllerFuncionario.cs" />
+    <Compile Include="ADO\ControllerProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="App1.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

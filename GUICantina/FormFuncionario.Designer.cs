@@ -1,6 +1,6 @@
 ﻿namespace GUICantina
 {
-    partial class FormFuncionarios
+    partial class FormFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -145,7 +145,7 @@
             this.Name = "FormFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Funcionários";
-            this.Load += new System.EventHandler(this.FormFuncionarios_Load);
+          
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,5 +11,10 @@ namespace ModelCantina
         public int IdProduto { get; set; }
         public string Descricao { get; set; }
         public double PrecoUnitario { get; set; }
+
+        public override string ToString()
+        {
+            return Descricao;
+        }
     }
 }

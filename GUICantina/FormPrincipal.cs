@@ -12,7 +12,8 @@ namespace GUICantina
 {
     public partial class FormPrincipal : Form
     {
-        private FormFuncionarios formFuncionario;
+        private FormFuncionario formFuncionario;
+        private FormVenda formVenda;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -21,8 +22,15 @@ namespace GUICantina
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (formFuncionario == null)
-                formFuncionario = new FormFuncionarios();
+                formFuncionario = new FormFuncionario();
             formFuncionario.ShowDialog(this);
+        }
+
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (formVenda == null)
+                formVenda = new FormVenda();
+            formVenda.ShowDialog(this);
         }
     }
 }

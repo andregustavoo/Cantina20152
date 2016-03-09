@@ -8,18 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ModelCantina;
-using ControllerCantina.Interfaces;
 using ControllerCantina.ADO;
 
 namespace GUICantina
 {
-    public partial class FormFuncionarios : Form
+    public partial class FormFuncionario : Form
     {
-       private IControllerFuncionario controller;
-        public FormFuncionarios()
+       private ControllerFuncionario controller;
+        public FormFuncionario()
         {
             InitializeComponent();
-            controller = (IControllerFuncionario) new ControllerCantina.ADO.ControllerFuncionarioADO();
+            controller = new ControllerCantina.ADO.ControllerFuncionario();
             AtualizarDataGrid();
         }
 
@@ -64,7 +63,7 @@ namespace GUICantina
             }
             else
             {
-                if (controller.AtualizarFuncionario(funcionario))
+                if (controller.GravarFuncionario(funcionario))
                 {
                     MessageBox.Show("Funcionário Atualizado com Sucesso", "Cantina");
                     AtualizarDataGrid();
@@ -103,7 +102,7 @@ namespace GUICantina
                 MessageBox.Show("Selecione um Funcionário para Excluir", "Cantina");
                 return;
             }
-
+            //Solicita a confirmação do usuário
             DialogResult result = MessageBox.Show("Deseja Realmente Excluir?", "Cantina", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
@@ -120,11 +119,6 @@ namespace GUICantina
                     MessageBox.Show("Erro Excluindo Funcionário", "Cantinha");
                 }
             }
-        }
-
-        private void FormFuncionarios_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

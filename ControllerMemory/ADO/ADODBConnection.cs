@@ -11,12 +11,10 @@ namespace ControllerCantina.ADO
     public sealed class ADODBConnection
     {
         private static volatile SqlConnection instance;
-
         private ADODBConnection()
         {
 
         }
-
         public static SqlConnection Connection()
         {
                 if (instance==null)
