@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelCantina", "ModelCantin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUICantina", "GUICantina\GUICantina.csproj", "{BF2CAFE0-3A39-46D7-AD22-AD3FE6468D1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerCantina", "ControllerMemory\ControllerCantina.csproj", "{7621B707-6021-4C3D-9FE5-41C5AF614E57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerCantina", "Controller\ControllerCantina.csproj", "{7621B707-6021-4C3D-9FE5-41C5AF614E57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
