@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxIDFuncionario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNomeFuncionario = new System.Windows.Forms.TextBox();
@@ -37,7 +38,9 @@
             this.buttonRemover = new System.Windows.Forms.Button();
             this.dataGridViewFuncionarios = new System.Windows.Forms.DataGridView();
             this.textBoxMatricula = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxIDFuncionario
@@ -65,6 +68,7 @@
             this.textBoxNomeFuncionario.Name = "textBoxNomeFuncionario";
             this.textBoxNomeFuncionario.Size = new System.Drawing.Size(398, 22);
             this.textBoxNomeFuncionario.TabIndex = 3;
+            this.textBoxNomeFuncionario.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNomeFuncionario_Validating);
             // 
             // label3
             // 
@@ -125,7 +129,11 @@
             this.textBoxMatricula.Size = new System.Drawing.Size(189, 22);
             this.textBoxMatricula.TabIndex = 4;
             // 
-            // FormFuncionarios
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // FormFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,11 +150,11 @@
             this.Controls.Add(this.textBoxIDFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "FormFuncionarios";
+            this.Name = "FormFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Funcionários";
-          
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,6 +171,7 @@
         private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.DataGridView dataGridViewFuncionarios;
         private System.Windows.Forms.TextBox textBoxMatricula;
+        private System.Windows.Forms.ErrorProvider errorProvider;
 
     }
 }

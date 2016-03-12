@@ -120,5 +120,17 @@ namespace GUICantina
                 }
             }
         }
+
+        private void textBoxNomeFuncionario_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBoxNomeFuncionario.Text.Trim().Length < 10)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBoxNomeFuncionario, "O nome do funcionário deve ter pelo menos 10 caracteres");
+                return;
+            }
+            errorProvider.SetError(textBoxNomeFuncionario, "");
+
+        }
     }
 }
