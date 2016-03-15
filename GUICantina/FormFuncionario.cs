@@ -20,6 +20,7 @@ namespace GUICantina
             InitializeComponent();
             controller = new ControllerCantina.ADO.ControllerFuncionario();
             AtualizarDataGrid();
+            Novo();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -38,6 +39,8 @@ namespace GUICantina
             textBoxNomeFuncionario.Text = "";
             textBoxMatricula.Text = "";
             textBoxNomeFuncionario.Focus();
+            errorProvider.SetError(textBoxNomeFuncionario, "");
+            errorProvider.SetError(textBoxMatricula, "");
         }
 
         private void buttonGravar_Click(object sender, EventArgs e)
@@ -131,6 +134,17 @@ namespace GUICantina
             }
             errorProvider.SetError(textBoxNomeFuncionario, "");
 
+        }
+
+        private void textBoxMatricula_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBoxMatricula.Text.Trim().Length < 6)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBoxMatricula, "A matrícula do funcionário deve ter pelo menos 6 caracteres");
+                return;
+            }
+            errorProvider.SetError(textBoxMatricula, "");
         }
     }
 }

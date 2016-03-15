@@ -118,7 +118,7 @@
             this.dataGridViewFuncionarios.Name = "dataGridViewFuncionarios";
             this.dataGridViewFuncionarios.ReadOnly = true;
             this.dataGridViewFuncionarios.RowTemplate.Height = 24;
-            this.dataGridViewFuncionarios.Size = new System.Drawing.Size(506, 190);
+            this.dataGridViewFuncionarios.Size = new System.Drawing.Size(532, 190);
             this.dataGridViewFuncionarios.TabIndex = 11;
             this.dataGridViewFuncionarios.SelectionChanged += new System.EventHandler(this.dataGridViewFuncionarios_SelectionChanged);
             // 
@@ -128,6 +128,7 @@
             this.textBoxMatricula.Name = "textBoxMatricula";
             this.textBoxMatricula.Size = new System.Drawing.Size(189, 22);
             this.textBoxMatricula.TabIndex = 4;
+            this.textBoxMatricula.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMatricula_Validating);
             // 
             // errorProvider
             // 
@@ -138,7 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(547, 304);
+            this.ClientSize = new System.Drawing.Size(573, 304);
             this.Controls.Add(this.textBoxMatricula);
             this.Controls.Add(this.dataGridViewFuncionarios);
             this.Controls.Add(this.buttonRemover);
