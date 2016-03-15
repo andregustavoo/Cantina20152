@@ -10,7 +10,7 @@ namespace ControllerCantina.ADO
 {
     public class ControllerProduto
     {
-        public List<Produto> BuscarProduto(string descricao)
+        public List<Produto> ListarProdutos()
         {
             SqlConnection conexao = ADODBConnection.Connection();
             conexao.Open();

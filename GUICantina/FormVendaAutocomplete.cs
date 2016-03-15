@@ -30,7 +30,7 @@ namespace GUICantina
             textBoxProduto.AutoCompleteMode = AutoCompleteMode.Suggest;
             textBoxProduto.AutoCompleteSource = AutoCompleteSource.CustomSource;
             produtos = new AutoCompleteStringCollection();
-            listaProdutos = controllerProduto.BuscarProduto("");
+            listaProdutos = controllerProduto.ListarProdutos();
             foreach (Produto prod in listaProdutos)
             {
                 produtos.Add(prod.Descricao);
@@ -40,6 +40,8 @@ namespace GUICantina
         private void AtualizarDataGrid()
         {
             dataGridViewVendas.DataSource = vendaAtual.Items;
+            dataGridViewVendas.Update();
+            dataGridViewVendas.Columns[0].Visible = false;
         }
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
@@ -66,6 +68,11 @@ namespace GUICantina
                 AtualizarDataGrid();//Não está atualizando o Grid depois da primeira execução.
             }
             
+        }
+
+        private void FormVendaAutocomplete_Load(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonConfirmaVenda, "Finalizar a Venda");
         }
     }
 }

@@ -75,7 +75,7 @@ namespace ControllerCantina.ADO{
          Busca os funcionario pelo nome. Se a variável nome for uma string vazia o comando retorna
          * todos os funcionários cadastrados armazenados em uma lista
          */
-        public IList<Funcionario> BuscarFuncionarios(string nome)
+        public IList<Funcionario> ListarFuncionarios()
         {
             SqlConnection connection=ADODBConnection.Connection();
             connection.Open();
@@ -86,11 +86,6 @@ namespace ControllerCantina.ADO{
              * já que a ordem das colunas vai ser necessária no momento de criação da lista
              */
             command.CommandText = "select id_funcionario,nome_funcionario,matricula_funcionario from tbl_funcionario";
-            if (nome.Length != 0)//Se o nome for diferente de vazio, adiciona a cláusula where ao select
-            {
-                command.CommandText += " where nome like @nome";
-                command.Parameters.AddWithValue("@nome", "%" + nome + "%");
-            }
             Funcionario funcionario;
             /*Cria uma lista de funcionários vazias para armazenar os dados */
             IList<Funcionario> funcionarios = new List<Funcionario>();
@@ -113,6 +108,28 @@ namespace ControllerCantina.ADO{
             }
             connection.Close();//Fecha a conexão
             return funcionarios;//Retorna a lista de funcionários
+        }
+
+        public Funcionario LocalizarFuncionarioPorID(int idFuncionario)
+        {
+            SqlConnection conexao = ADODBConnection.Connection();
+            SqlCommand comando = conexao.CreateCommand();
+            comando.CommandText = "select id_funcionario,nome_funcionario,matricula_funcionario from tbl_funcionario where id_funcionario=@idfuncionario";
+            comando.Parameters.AddWithValue("@ifuncionario", idFuncionario);
+            conexao.Open();
+            Funcionario func = null; ;
+            using(SqlDataReader reader = comando.ExecuteReader())
+            {
+                conexao.Close();
+                if (reader.Read())
+                {
+                    func = new Funcionario();
+                    func.IdFuncionario = reader.GetInt32(0);
+                    func.Nome = reader.GetString(1);
+                    func.Matricula = reader.GetString(2);
+                }
+            }
+            return func;
         }
     }
 }

@@ -13,7 +13,6 @@ namespace GUICantina
     public partial class FormPrincipal : Form
     {
         private FormFuncionario formFuncionario;
-        private FormVenda formVenda;
         private FormVendaAutocomplete formVendaAutocomplete;
         public FormPrincipal()
         {

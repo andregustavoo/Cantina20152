@@ -81,7 +81,7 @@ namespace GUICantina
         }
         private void AtualizarDataGrid()
         {
-            dataGridViewFuncionarios.DataSource = controller.BuscarFuncionarios("");
+            dataGridViewFuncionarios.DataSource = controller.ListarFuncionarios();
             dataGridViewFuncionarios.Columns[0].Visible = false;
         }
 
@@ -89,7 +89,10 @@ namespace GUICantina
         {
             if (dataGridViewFuncionarios.CurrentRow != null)
             {
-                Funcionario f = ((List<Funcionario>)dataGridViewFuncionarios.DataSource).ElementAt(dataGridViewFuncionarios.CurrentRow.Index);
+                //Funcionario f = ((List<Funcionario>)dataGridViewFuncionarios.DataSource).ElementAt(dataGridViewFuncionarios.CurrentRow.Index);
+
+                int idFuncionario = Convert.ToInt32(dataGridViewFuncionarios.CurrentRow.Cells[0].Value.ToString());
+                Funcionario f = controller.LocalizarFuncionarioPorID(idFuncionario);
                 textBoxIDFuncionario.Text = f.IdFuncionario.ToString();
                 textBoxNomeFuncionario.Text = f.Nome;
                 textBoxMatricula.Text = f.Matricula;
