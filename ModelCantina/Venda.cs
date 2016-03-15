@@ -12,11 +12,11 @@ namespace ModelCantina
         public DateTime DataVenda { get; set; }
         public Funcionario Funcionario { get; set; }
         public Cliente Cliente { get; set; }
-        public IList<ProdutoVenda> Items { get; set; }
+        public IList<VendaProduto> Items { get; set; }
 
         public Venda()
         {
-            Items = new List<ProdutoVenda>();
+            Items = new List<VendaProduto>();
         }
 
         public double ValorTotal
@@ -24,13 +24,18 @@ namespace ModelCantina
             get
             {
                 double total = 0.0;
-                foreach (ProdutoVenda produtoVenda in Items)
+                foreach (VendaProduto produtoVenda in Items)
                 {
                     total += produtoVenda.Quantidade * produtoVenda.Produto.PrecoUnitario;
                 }
                 return total;
                 
             }
+        }
+
+        public override string ToString()
+        {
+            return IdVenda.ToString();
         }
 
 

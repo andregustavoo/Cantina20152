@@ -47,7 +47,6 @@ namespace GUICantina
         {
             
             Funcionario funcionario = new Funcionario();
-            //Colocar a validação aqui
             funcionario.Nome = textBoxNomeFuncionario.Text;
             funcionario.Matricula = textBoxMatricula.Text;
             funcionario.IdFuncionario = Convert.ToInt32(textBoxIDFuncionario.Text);

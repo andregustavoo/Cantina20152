@@ -14,6 +14,7 @@ namespace GUICantina
     {
         private FormFuncionario formFuncionario;
         private FormVenda formVenda;
+        private FormVendaAutocomplete formVendaAutocomplete;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -28,9 +29,9 @@ namespace GUICantina
 
         private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (formVenda == null)
-                formVenda = new FormVenda();
-            formVenda.ShowDialog(this);
+            if (formVendaAutocomplete == null)
+                formVendaAutocomplete = new FormVendaAutocomplete();
+            formVendaAutocomplete.ShowDialog(this);
         }
     }
 }

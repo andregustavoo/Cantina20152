@@ -42,7 +42,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Conta.cs" />
     <Compile Include="Funcionario.cs" />
-    <Compile Include="ProdutoVenda.cs" />
+    <Compile Include="VendaProduto.cs" />
     <Compile Include="Pagamento.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
